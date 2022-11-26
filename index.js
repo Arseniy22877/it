@@ -10,7 +10,7 @@ const {Partials} = require('discord.js');
 const message = require('./models/message');
 
 const channel_id = "1043830298732933150";
-const TOKEN = "OTk2MDc5NjQxODY3NjA0MDA4.G5N4f9.4Bc4jD6TUsFE2LnxolugvJq6Fk7lHr3y_6xZWM";
+const TOKEN = "OTk2MDc5NjQxODY3NjA0MDA4.Gnsrz4.k8FjHhXDpwH1SlHFvWtfvqaosSWePcGDv_ZyMY";
 const banned_channel_id = "1043820095966814230";
 const approved_channel_id = "1043820063125413888";
 
