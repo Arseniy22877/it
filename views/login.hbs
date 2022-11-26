@@ -1,0 +1,123 @@
+<style>
+  
+  .input-field{
+    display: flex;
+    flex-direction: column;
+    left: 120px;
+    right: 150px;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top:140px;
+    }
+    .item{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    textarea{
+      color: black;
+    }
+    .name{
+      color: whitesmoke;
+    }
+    .inp{
+      background-color: #170b18;
+      border: solid #570082;
+      color: whitesmoke;
+    }
+    .btn{
+        font-size: large;
+        border-radius:10px;
+        color: whitesmoke;
+        background-color: #570082;
+        width:fit-content;
+        height: 40px;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+        border: none;
+    }
+    .btn:hover {
+      box-shadow: 0 0 10px 0 #570082 inset, 0 0 10px 4px #570082;
+  }
+  .glv{
+    width: 120px;
+  }
+  .fin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+          @media screen and (max-width: 1100px) {
+          .glv{
+            width: 90px;
+          }
+          .btn{
+            height: 25px;
+            font-size: small;
+          }
+          .input-field{
+            left: 10px;
+          }
+} 
+
+        @media screen and (max-width: 450px) {
+          .glv{
+            width: 90px;
+          }
+          .btn{
+            height: 25px;
+            font-size: small;
+          }
+          .input-field{
+            left: 10px;
+          }
+} 
+</style>
+<div class="flex">
+    <form action="/" method="get">
+        <button class="btn glv">Главная</button>
+    </form>
+    <img class="btn", src="https://free-png.ru/wp-content/uploads/2020/04/VK_Blue_Logo_t.png">
+    <img class="btn youtube", src="https://i.ibb.co/6XVkL6k/You-Tube-full-color-icon-2017-svg-1-2.png">
+</div>
+<form action="/login" method="post" enctype="application/x-www-form-urlencoded">
+
+  <div class="input-field">
+    <div class="warn">
+      Перед тем как подавать заявку ознакомьтесь с <a class="link" href="/rules">правилами</a>
+</div>
+    <div class="warn">
+      Обратите внимание, что стоимость проходки - 100руб
+</div>
+    <div class="item">
+      <div class="name">Ваш ник в майнкрафт:</div>
+      <input name="nick" class="inp" maxlength="20" value="{{nick}}">
+    </div>
+    <div class="item">
+      <div class="name">Ваш возраст:</div>
+    <input name="age", type="number" class="inp" value="{{age}}">
+    </div>
+    <div class="item">
+      <div class="name">Сколько полных лет вы играете в майнкрафт?</div>
+    <input name="play_age", type="number" class="inp" value="{{play_age}}">
+    </div>
+    <div class="item">
+      <div class="name">Как много вы можете играть на сервере?</div>
+    <input name="play_time" class="inp" maxlength="40" value="{{play_time}}">
+    </div>
+    <div class="item">
+      <div class="name">Что вы умеете? Назовите свои навыки, которыми вы обладаете в Майнкрафте (РолеПлей, строительство, создание ферм и тд. и тп.)</div>
+    <textarea name="description" class="inp" maxlength="100">{{description}}</textarea>
+    </div>
+    <div class="item">
+      <div class="name">Ваши планы на этот проект:</div>
+    <textarea name="reason" class="inp" maxlength="100">{{reason}}</textarea>
+    </div>
+    <button type="submit" class="btn fin">Отправить заявку</button>
+  {{#if has_errors}}
+  <div class="error">
+      Заполните поля правильно
+  </div>
+  {{/if}}
+  </div>
+
+</form>

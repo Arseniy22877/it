@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Init Time</title>
+</head>
+<style>
+  a{
+    cursor:default;
+  }
+    body{
+        background-color: #170b18;
+    }
+    .logo{
+        position: absolute;
+        top: 25px;
+        left:140px;
+        width: 40px;
+        height: 40px;
+        border: none;
+    }
+    .logo_text{
+        position: absolute;
+        top: 27px;
+        left:190px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        font-size: x-large;
+        font-weight: bold;
+        color: whitesmoke;
+        width: fit-content;
+    }
+    /* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+.flex{
+        display: flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        top: 0px;
+        width: 295px;
+        height: 90px;
+        left: 1100px;
+        right: 140px;
+        position: absolute;
+
+    }
+.btn{
+        font-size: large;
+        border-radius:10px;
+        color: whitesmoke;
+        background-color: #570082;
+        height: 40px;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+        border: none;
+        width: fit-content
+    }
+.btn:hover {
+      box-shadow: 0 0 10px 0 #570082 inset, 0 0 10px 4px #570082;
+  }
+  .error{
+    margin-top: 10px;
+    color: red;
+    margin-bottom: 10px;
+  }
+  .warn{
+    font-size: 20px;
+    color: whitesmoke;
+    padding-bottom: 10px;
+  }
+  .link{
+    color: #6900ea;
+    cursor:default;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+
+
+  }
+  .link:hover{
+    color: #46009c;
+    text-decoration: underline;
+    
+  }
+  @media screen and (max-width: 1100px) {
+    .flex{
+      left: 75%;
+      width: 24%;
+    }
+    .logo{
+      left: 10px;
+      top: 33px;
+      height: 30px;
+      width: auto;
+    }
+    .logo_text{
+      left: 40px;
+      font-size: medium;
+      top: 35px;
+    }
+    .btn{
+      height: 25px;
+      font-size: small;
+    }
+}  
+  @media screen and (max-width: 450px) {
+    .flex{
+      left: 60%;
+      width: 39%;
+    }
+    .logo{
+      left: 10px;
+      top: 33px;
+      height: 30px;
+      width: auto;
+    }
+    .logo_text{
+      left: 40px;
+      font-size: medium;
+      top: 35px;
+    }
+    .btn{
+      height: 25px;
+      font-size: small;
+    }
+}  
+
+</style>
+<body>
+  <a href="/">
+    <img class="logo", src="https://cdn.discordapp.com/attachments/993288513044873259/1044929148226908190/20221123_135344.png">
+    <div class="logo_text">INIT TIME</div>
+  </a>
+    {{{body}}}
+</body>
+</html>

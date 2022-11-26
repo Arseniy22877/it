@@ -1,0 +1,91 @@
+<style>
+    .msg{
+    left: 140px;
+    right: 150px;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    top:140px;
+    color: whitesmoke;
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    .glv{
+        width: 120px;
+    }
+    .main{
+        font-size: 50px;
+    }
+    .error{
+        font-weight: 1000;
+    }
+
+        @media screen and (max-width: 450px) {
+        .glv{
+            width: 90px;
+          }
+          .btn{
+            height: 25px;
+            font-size: small;
+          }
+    .msg{
+        left: 10px;
+        width: 90%;
+        position: relative;
+        height: fit-content;
+        top:100px;
+        color: whitesmoke;
+        font-size: medium;
+    }
+
+} 
+</style>
+<div class="flex">
+    <form action="/" method="get">
+        <button class="btn glv">Главная</button>
+    </form>
+    <img class="btn", src="https://free-png.ru/wp-content/uploads/2020/04/VK_Blue_Logo_t.png">
+    <img class="btn youtube", src="https://i.ibb.co/6XVkL6k/You-Tube-full-color-icon-2017-svg-1-2.png">
+</div>
+{{#if status1}}
+<div class="msg main">
+    Вы уже подали заявку, ожидайте.
+        <div class="warn">
+      Ознакомьтесь с <a class="link" href="/rules">правилами</a>
+</div>
+</div>
+{{/if}}
+{{#if status2}}
+<div class="msg main">
+    Ваша заявка одобрена.
+</div>
+<div class="msg">
+    Чтобы получить ссылку на Дискорд сервер, отправьте на карту 100руб - 2200700445754145
+</div>
+<div class="msg error">
+    При отправке денег укажите в сообщении ваш ник.
+</div>
+<div class="msg">
+    Деньги возврату не подлежат. В случае несоблюдения условий ответственность лежит на вас.
+</div>
+    <div class="warn msg">
+      Ознакомьтесь с <a class="link" href="/rules">правилами</a>
+</div>
+{{/if}}
+{{#if status3}}
+<div class="msg main">
+    Ваша заявка была отклонена.
+</div>
+{{/if}}
+{{#if status4}}
+<div class="msg main">
+    Ваша заявка одобрена.
+</div>
+<div class="msg">
+    https://discord.gg/VdyRapdH4G
+</div>
+    <div class="warn msg">
+      Ознакомьтесь с <a class="link" href="/rules">правилами</a>
+</div>
+{{/if}}
